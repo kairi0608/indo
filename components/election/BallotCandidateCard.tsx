@@ -1,0 +1,1 @@
+import{Candidate}from"@/types/election";export function BallotCandidateCard({candidate,onSelect}:{candidate:Candidate;onSelect:()=>void}){return <button className="ballot-card" onClick={onSelect}><span className="giant-symbol">{candidate.symbol}</span><strong>{candidate.name}</strong><span className="select-label">選択する</span></button>}

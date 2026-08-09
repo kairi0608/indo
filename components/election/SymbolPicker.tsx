@@ -1,0 +1,2 @@
+const symbols=["★","●","▲","■","◆","♥","♣","☀","☂","✈","☎","⚽","🍎","🌸","🌙","🚲"];
+export function SymbolPicker({value,used,onChange}:{value:string;used:string[];onChange:(s:string)=>void}){return <div><div className="symbol-grid">{symbols.map(s=><button type="button" aria-label={`${s}を選択`} className={`symbol-option ${value===s?"selected":""}`} disabled={used.includes(s)&&value!==s} onClick={()=>onChange(s)} key={s}>{s}</button>)}</div>{value&&used.includes(value)&&<p className="error">このマークは他の候補者が使用しています</p>}</div>}

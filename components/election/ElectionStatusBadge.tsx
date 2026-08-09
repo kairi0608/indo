@@ -1,0 +1,1 @@
+import{ElectionStatus}from"@/types/election";const labels={SETUP:"設定中",READY:"開始待ち",POLLING:"投票受付中",PAUSED:"受付停止中",CLOSED:"選挙終了",COUNTED:"開票済み"};export function ElectionStatusBadge({status}:{status:ElectionStatus}){return <span className={`badge s-${status.toLowerCase()}`}>{labels[status]}</span>}
